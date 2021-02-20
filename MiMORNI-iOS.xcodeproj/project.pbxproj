@@ -13,10 +13,11 @@
 		0328F59A25E1AD480044D335 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0328F59825E1AD480044D335 /* Main.storyboard */; };
 		0328F59C25E1AD4A0044D335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0328F59B25E1AD4A0044D335 /* Assets.xcassets */; };
 		0328F59F25E1AD4A0044D335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0328F59D25E1AD4A0044D335 /* LaunchScreen.storyboard */; };
+		0328F5A925E1AE140044D335 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0328F5A825E1AE140044D335 /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0328F58F25E1AD480044D335 /* MiMORNI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiMORNI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328F58F25E1AD480044D335 /* MiMORNI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiMORNI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0328F59225E1AD480044D335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0328F59425E1AD480044D335 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0328F59625E1AD480044D335 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +25,7 @@
 		0328F59B25E1AD4A0044D335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0328F59E25E1AD4A0044D335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0328F5A025E1AD4A0044D335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0328F5A825E1AE140044D335 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,7 @@
 		0328F59025E1AD480044D335 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0328F58F25E1AD480044D335 /* MiMORNI-iOS.app */,
+				0328F58F25E1AD480044D335 /* MiMORNI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +58,32 @@
 		0328F59125E1AD480044D335 /* MiMORNI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0328F5A725E1ADDC0044D335 /* Supporting Files */,
+				0328F5A625E1ADCB0044D335 /* Main */,
 				0328F59225E1AD480044D335 /* AppDelegate.swift */,
 				0328F59425E1AD480044D335 /* SceneDelegate.swift */,
-				0328F59625E1AD480044D335 /* ViewController.swift */,
-				0328F59825E1AD480044D335 /* Main.storyboard */,
-				0328F59B25E1AD4A0044D335 /* Assets.xcassets */,
-				0328F59D25E1AD4A0044D335 /* LaunchScreen.storyboard */,
 				0328F5A025E1AD4A0044D335 /* Info.plist */,
+				0328F59D25E1AD4A0044D335 /* LaunchScreen.storyboard */,
 			);
 			path = "MiMORNI-iOS";
+			sourceTree = "<group>";
+		};
+		0328F5A625E1ADCB0044D335 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0328F59825E1AD480044D335 /* Main.storyboard */,
+				0328F59625E1AD480044D335 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0328F5A725E1ADDC0044D335 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0328F5A825E1AE140044D335 /* Color.xcassets */,
+				0328F59B25E1AD4A0044D335 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +103,7 @@
 			);
 			name = "MiMORNI-iOS";
 			productName = "MiMORNI-iOS";
-			productReference = 0328F58F25E1AD480044D335 /* MiMORNI-iOS.app */;
+			productReference = 0328F58F25E1AD480044D335 /* MiMORNI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0328F59F25E1AD4A0044D335 /* LaunchScreen.storyboard in Resources */,
+				0328F5A925E1AE140044D335 /* Color.xcassets in Resources */,
 				0328F59C25E1AD4A0044D335 /* Assets.xcassets in Resources */,
 				0328F59A25E1AD480044D335 /* Main.storyboard in Resources */,
 			);
@@ -291,8 +311,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sjkim.MiMORNI-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjkim.MiMORNI;
+				PRODUCT_NAME = MiMORNI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -309,8 +329,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sjkim.MiMORNI-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjkim.MiMORNI;
+				PRODUCT_NAME = MiMORNI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
