@@ -14,6 +14,11 @@
 		0328F59C25E1AD4A0044D335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0328F59B25E1AD4A0044D335 /* Assets.xcassets */; };
 		0328F59F25E1AD4A0044D335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0328F59D25E1AD4A0044D335 /* LaunchScreen.storyboard */; };
 		0328F5A925E1AE140044D335 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0328F5A825E1AE140044D335 /* Color.xcassets */; };
+		034AD44425E1D30000111C28 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44325E1D30000111C28 /* UIView+Extension.swift */; };
+		034AD44725E1D40D00111C28 /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44625E1D40D00111C28 /* GoalCollectionViewCell.swift */; };
+		034AD44B25E1D6B900111C28 /* ViewController+GoalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44A25E1D6B900111C28 /* ViewController+GoalCollectionView.swift */; };
+		034AD44E25E1DD1F00111C28 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44D25E1DD1F00111C28 /* GoalTableViewCell.swift */; };
+		034AD45025E1DD9A00111C28 /* ViewController+GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44F25E1DD9A00111C28 /* ViewController+GoalTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		0328F59E25E1AD4A0044D335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0328F5A025E1AD4A0044D335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0328F5A825E1AE140044D335 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		034AD44325E1D30000111C28 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		034AD44625E1D40D00111C28 /* GoalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewCell.swift; sourceTree = "<group>"; };
+		034AD44A25E1D6B900111C28 /* ViewController+GoalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+GoalCollectionView.swift"; sourceTree = "<group>"; };
+		034AD44D25E1DD1F00111C28 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		034AD44F25E1DD9A00111C28 /* ViewController+GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+GoalTableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		0328F59125E1AD480044D335 /* MiMORNI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				034AD44025E1CDB500111C28 /* Extensions */,
 				0328F5A725E1ADDC0044D335 /* Supporting Files */,
 				0328F5A625E1ADCB0044D335 /* Main */,
 				0328F59225E1AD480044D335 /* AppDelegate.swift */,
@@ -71,6 +82,8 @@
 		0328F5A625E1ADCB0044D335 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				034AD44C25E1DCFD00111C28 /* GoalTable */,
+				034AD44525E1D3DF00111C28 /* GoalCollection */,
 				0328F59825E1AD480044D335 /* Main.storyboard */,
 				0328F59625E1AD480044D335 /* ViewController.swift */,
 			);
@@ -84,6 +97,32 @@
 				0328F59B25E1AD4A0044D335 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		034AD44025E1CDB500111C28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				034AD44325E1D30000111C28 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		034AD44525E1D3DF00111C28 /* GoalCollection */ = {
+			isa = PBXGroup;
+			children = (
+				034AD44625E1D40D00111C28 /* GoalCollectionViewCell.swift */,
+				034AD44A25E1D6B900111C28 /* ViewController+GoalCollectionView.swift */,
+			);
+			path = GoalCollection;
+			sourceTree = "<group>";
+		};
+		034AD44C25E1DCFD00111C28 /* GoalTable */ = {
+			isa = PBXGroup;
+			children = (
+				034AD44D25E1DD1F00111C28 /* GoalTableViewCell.swift */,
+				034AD44F25E1DD9A00111C28 /* ViewController+GoalTableView.swift */,
+			);
+			path = GoalTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034AD44725E1D40D00111C28 /* GoalCollectionViewCell.swift in Sources */,
+				034AD45025E1DD9A00111C28 /* ViewController+GoalTableView.swift in Sources */,
+				034AD44E25E1DD1F00111C28 /* GoalTableViewCell.swift in Sources */,
 				0328F59725E1AD480044D335 /* ViewController.swift in Sources */,
 				0328F59325E1AD480044D335 /* AppDelegate.swift in Sources */,
+				034AD44425E1D30000111C28 /* UIView+Extension.swift in Sources */,
+				034AD44B25E1D6B900111C28 /* ViewController+GoalCollectionView.swift in Sources */,
 				0328F59525E1AD480044D335 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
