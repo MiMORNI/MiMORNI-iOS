@@ -27,11 +27,20 @@ class ViewController: UIViewController {
     let goalTableReuseIdentifier = "goalTableCell"
     let tableCellSpacingHeight: CGFloat = 4
     
-    var smallGoals = ["Make a bed", "Drink 1L of water", "Write a blog", "Read newspaper", "Meditation", "Journaling", ]
-    var bigGoals = ["Exercise", "Read a book", "Study (learn some new things)"]
-    var goalItems = ["1"]
+    var userName:String?
+    var duration:String?
+    var waketime:String?
+    var bedtime:String?
+    var smallGoals:[String]?
+    var bigGoals:[String]?
+//    var smallGoals = ["Make a bed", "Drink 1L of water", "Write a blog", "Read newspaper", "Meditation", "Journaling", ]
+//    var bigGoals = ["Exercise", "Read a book", "Study (learn some new things)"]
+    
+    var goalItems = [String()]
     
     let goalToIcon = ["Make a bed": "iconBed",  "Drink 1L of water": "iconWater", "Write a blog": "iconBlog", "Read newspaper": "iconNews", "Meditation": "iconMeditation", "Journaling": "iconJournal", "Exercise": "iconExercise", "Read a book": "iconBook", "Study (learn some new things)":"iconStudy"]
+    
+    let iconToGoal = ["iconBed": "Make a bed", "iconWater": "Drink 1L of water", "iconBlog" :"Write a blog", "iconNews": "Read newspaper", "iconMeditation":"Meditation", "iconJournal": "Journaling", "iconExercise": "Exercise", "iconBook": "Read a book", "iconStudy": "Study (learn some new things)"]
     
     
     override func viewDidLoad() {
@@ -41,6 +50,20 @@ class ViewController: UIViewController {
         
         todayDateLabel.text = "Today, " + formatPrettyDate()
         self.goalItems = []
+        
+        if let name = userName, let duration = duration, let waketime = waketime, let bedtime = bedtime, let sGoal = smallGoals, let bGoal = bigGoals {
+            userNameLabel.text = name
+            durationLabel.text = duration
+            daytimeLabel.text = waketime + " TO " + bedtime
+            let numGoals = sGoal.count + bGoal.count
+            if numGoals == 1 {
+                numOfGoalsLabel.text = "\(numGoals) Goal"
+            }
+            else {
+                numOfGoalsLabel.text = "\(numGoals) Goals"
+            }
+        }
+        
 //        if segmentedControl.selectedSegmentIndex == 0 {
 //            self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.09411764706, green: 0.09411764706, blue: 0.09411764706, alpha: 1)], for: .normal)
 //            segmentedControl.selectedSegmentTintColor = #colorLiteral(red: 0.5529411765, green: 0.4274509804, blue: 0.07450980392, alpha: 1)

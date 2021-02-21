@@ -13,25 +13,26 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.segmentedControl.selectedSegmentIndex == 0 {
-            return self.smallGoals.count
+        if self.segmentedControl.selectedSegmentIndex == 0, let count = self.smallGoals?.count {
+            return count
         }
-        else {
-            return self.bigGoals.count
+        else if let count = self.bigGoals?.count {
+            return count
         }
+        return 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: goalTableReuseIdentifier, for: indexPath as IndexPath) as! GoalTableViewCell
-        if self.segmentedControl.selectedSegmentIndex == 0 {
-            cell.goalLabel.text = smallGoals[indexPath.row]
+        if self.segmentedControl.selectedSegmentIndex == 0, let goal = smallGoals?[indexPath.row] {
+            cell.goalLabel.text = self.iconToGoal[goal]
             cell.contentView.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7764705882, blue: 0.2470588235, alpha: 1)
             cell.goalLabel.textColor = #colorLiteral(red: 0.09411764706, green: 0.09411764706, blue: 0.09411764706, alpha: 1)
             cell.checkButton.setImage(UIImage(named:"buttonCheckboxBlank"), for: .normal)
             cell.checkButton.setImage(UIImage(named:"buttonCheckboxActive"), for: .selected)
         }
-        else {
-            cell.goalLabel.text = bigGoals[indexPath.row]
+        else if let goal = bigGoals?[indexPath.row] {
+            cell.goalLabel.text = self.iconToGoal[goal]
             cell.contentView.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2431372549, blue: 0.2431372549, alpha: 1)
             cell.goalLabel.textColor = UIColor.white
             cell.checkButton.setImage(UIImage(named:"buttonYCheckboxBlank"), for: .normal)

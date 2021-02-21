@@ -19,6 +19,21 @@
 		034AD44B25E1D6B900111C28 /* ViewController+GoalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44A25E1D6B900111C28 /* ViewController+GoalCollectionView.swift */; };
 		034AD44E25E1DD1F00111C28 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44D25E1DD1F00111C28 /* GoalTableViewCell.swift */; };
 		034AD45025E1DD9A00111C28 /* ViewController+GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD44F25E1DD9A00111C28 /* ViewController+GoalTableView.swift */; };
+		034AD45525E2084E00111C28 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034AD45425E2084E00111C28 /* Setting.storyboard */; };
+		034AD45725E21D4700111C28 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD45625E21D4700111C28 /* UserNameViewController.swift */; };
+		034AD45925E21D6600111C28 /* DurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD45825E21D6600111C28 /* DurationViewController.swift */; };
+		034AD45B25E21D9100111C28 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD45A25E21D9100111C28 /* TimeViewController.swift */; };
+		03CCE15625E2301000C6A8B7 /* UITextField+ActivateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE15525E2301000C6A8B7 /* UITextField+ActivateButton.swift */; };
+		03CCE15925E2324500C6A8B7 /* DurationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE15825E2324500C6A8B7 /* DurationTableViewCell.swift */; };
+		03CCE15D25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE15C25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift */; };
+		03CCE16225E232B700C6A8B7 /* WakeTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE16125E232B700C6A8B7 /* WakeTimeTableViewCell.swift */; };
+		03CCE16425E232C300C6A8B7 /* BedTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE16325E232C300C6A8B7 /* BedTimeTableViewCell.swift */; };
+		03CCE16625E232D300C6A8B7 /* TimeViewController+TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE16525E232D300C6A8B7 /* TimeViewController+TimeTableView.swift */; };
+		03E144FF25E250D1008297B2 /* BigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E144FE25E250D1008297B2 /* BigTableViewCell.swift */; };
+		03E1450125E250E0008297B2 /* SmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1450025E250E0008297B2 /* SmallTableViewCell.swift */; };
+		03E1450325E250FC008297B2 /* GoalSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1450225E250FC008297B2 /* GoalSettingViewController.swift */; };
+		03E1450525E25176008297B2 /* GoalSettingViewController+GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1450425E25176008297B2 /* GoalSettingViewController+GoalTableView.swift */; };
+		03E1450825E26121008297B2 /* Connectivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E1450725E26121008297B2 /* Connectivity.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +51,21 @@
 		034AD44A25E1D6B900111C28 /* ViewController+GoalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+GoalCollectionView.swift"; sourceTree = "<group>"; };
 		034AD44D25E1DD1F00111C28 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		034AD44F25E1DD9A00111C28 /* ViewController+GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+GoalTableView.swift"; sourceTree = "<group>"; };
+		034AD45425E2084E00111C28 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		034AD45625E21D4700111C28 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
+		034AD45825E21D6600111C28 /* DurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationViewController.swift; sourceTree = "<group>"; };
+		034AD45A25E21D9100111C28 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		03CCE15525E2301000C6A8B7 /* UITextField+ActivateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ActivateButton.swift"; sourceTree = "<group>"; };
+		03CCE15825E2324500C6A8B7 /* DurationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationTableViewCell.swift; sourceTree = "<group>"; };
+		03CCE15C25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DurationViewController+DurationTableView.swift"; sourceTree = "<group>"; };
+		03CCE16125E232B700C6A8B7 /* WakeTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeTimeTableViewCell.swift; sourceTree = "<group>"; };
+		03CCE16325E232C300C6A8B7 /* BedTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedTimeTableViewCell.swift; sourceTree = "<group>"; };
+		03CCE16525E232D300C6A8B7 /* TimeViewController+TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeViewController+TimeTableView.swift"; sourceTree = "<group>"; };
+		03E144FE25E250D1008297B2 /* BigTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTableViewCell.swift; sourceTree = "<group>"; };
+		03E1450025E250E0008297B2 /* SmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTableViewCell.swift; sourceTree = "<group>"; };
+		03E1450225E250FC008297B2 /* GoalSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSettingViewController.swift; sourceTree = "<group>"; };
+		03E1450425E25176008297B2 /* GoalSettingViewController+GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalSettingViewController+GoalTableView.swift"; sourceTree = "<group>"; };
+		03E1450725E26121008297B2 /* Connectivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Connectivity.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +98,7 @@
 		0328F59125E1AD480044D335 /* MiMORNI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				03E1450625E26106008297B2 /* Group Connectivity */,
 				034AD45325E207AF00111C28 /* Setting */,
 				034AD44025E1CDB500111C28 /* Extensions */,
 				0328F5A725E1ADDC0044D335 /* Supporting Files */,
@@ -104,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				034AD44325E1D30000111C28 /* UIView+Extension.swift */,
+				03CCE15525E2301000C6A8B7 /* UITextField+ActivateButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -129,8 +161,53 @@
 		034AD45325E207AF00111C28 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				03CCE16725E232DB00C6A8B7 /* GoalSetTable */,
+				03CCE15E25E2329400C6A8B7 /* TimeTable */,
+				03CCE15725E2321A00C6A8B7 /* DurationTable */,
+				034AD45425E2084E00111C28 /* Setting.storyboard */,
+				034AD45625E21D4700111C28 /* UserNameViewController.swift */,
+				034AD45825E21D6600111C28 /* DurationViewController.swift */,
+				034AD45A25E21D9100111C28 /* TimeViewController.swift */,
+				03E1450225E250FC008297B2 /* GoalSettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		03CCE15725E2321A00C6A8B7 /* DurationTable */ = {
+			isa = PBXGroup;
+			children = (
+				03CCE15825E2324500C6A8B7 /* DurationTableViewCell.swift */,
+				03CCE15C25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift */,
+			);
+			path = DurationTable;
+			sourceTree = "<group>";
+		};
+		03CCE15E25E2329400C6A8B7 /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				03CCE16125E232B700C6A8B7 /* WakeTimeTableViewCell.swift */,
+				03CCE16325E232C300C6A8B7 /* BedTimeTableViewCell.swift */,
+				03CCE16525E232D300C6A8B7 /* TimeViewController+TimeTableView.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
+		03CCE16725E232DB00C6A8B7 /* GoalSetTable */ = {
+			isa = PBXGroup;
+			children = (
+				03E144FE25E250D1008297B2 /* BigTableViewCell.swift */,
+				03E1450025E250E0008297B2 /* SmallTableViewCell.swift */,
+				03E1450425E25176008297B2 /* GoalSettingViewController+GoalTableView.swift */,
+			);
+			path = GoalSetTable;
+			sourceTree = "<group>";
+		};
+		03E1450625E26106008297B2 /* Group Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				03E1450725E26121008297B2 /* Connectivity.storyboard */,
+			);
+			path = "Group Connectivity";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +270,8 @@
 			files = (
 				0328F59F25E1AD4A0044D335 /* LaunchScreen.storyboard in Resources */,
 				0328F5A925E1AE140044D335 /* Color.xcassets in Resources */,
+				034AD45525E2084E00111C28 /* Setting.storyboard in Resources */,
+				03E1450825E26121008297B2 /* Connectivity.storyboard in Resources */,
 				0328F59C25E1AD4A0044D335 /* Assets.xcassets in Resources */,
 				0328F59A25E1AD480044D335 /* Main.storyboard in Resources */,
 			);
@@ -205,13 +284,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CCE16225E232B700C6A8B7 /* WakeTimeTableViewCell.swift in Sources */,
 				034AD44725E1D40D00111C28 /* GoalCollectionViewCell.swift in Sources */,
+				03CCE16625E232D300C6A8B7 /* TimeViewController+TimeTableView.swift in Sources */,
 				034AD45025E1DD9A00111C28 /* ViewController+GoalTableView.swift in Sources */,
 				034AD44E25E1DD1F00111C28 /* GoalTableViewCell.swift in Sources */,
+				03CCE15D25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift in Sources */,
 				0328F59725E1AD480044D335 /* ViewController.swift in Sources */,
+				03E1450525E25176008297B2 /* GoalSettingViewController+GoalTableView.swift in Sources */,
+				03CCE16425E232C300C6A8B7 /* BedTimeTableViewCell.swift in Sources */,
+				03E1450325E250FC008297B2 /* GoalSettingViewController.swift in Sources */,
+				034AD45925E21D6600111C28 /* DurationViewController.swift in Sources */,
+				034AD45B25E21D9100111C28 /* TimeViewController.swift in Sources */,
+				034AD45725E21D4700111C28 /* UserNameViewController.swift in Sources */,
 				0328F59325E1AD480044D335 /* AppDelegate.swift in Sources */,
+				03E144FF25E250D1008297B2 /* BigTableViewCell.swift in Sources */,
+				03E1450125E250E0008297B2 /* SmallTableViewCell.swift in Sources */,
 				034AD44425E1D30000111C28 /* UIView+Extension.swift in Sources */,
+				03CCE15925E2324500C6A8B7 /* DurationTableViewCell.swift in Sources */,
 				034AD44B25E1D6B900111C28 /* ViewController+GoalCollectionView.swift in Sources */,
+				03CCE15625E2301000C6A8B7 /* UITextField+ActivateButton.swift in Sources */,
 				0328F59525E1AD480044D335 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
