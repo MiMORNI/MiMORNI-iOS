@@ -25,6 +25,12 @@ class BedTimeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0))
+    }
 
     @IBAction func radioButtonClicked(_ sender: Any) {
         print("radio button tapped")

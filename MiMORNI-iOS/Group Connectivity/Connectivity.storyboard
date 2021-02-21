@@ -9,10 +9,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
+        <scene sceneID="aNW-Ww-55v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="iL1-di-cwj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UhY-Cr-ek7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0P-66-QQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="575"/>
+        </scene>
+        <!--Group View Controller-->
         <scene sceneID="WJw-SK-VMM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="zf1-qC-HXc" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="zf1-qC-HXc" customClass="GroupViewController" customModule="MiMORNI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PMt-3A-R4U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +36,9 @@
                                         <state key="normal" title="Today’s Goal">
                                             <color key="titleColor" name="blackTwo"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="iL1-di-cwj" kind="showDetail" id="etk-Ye-KEc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-HJ-8bE">
                                         <rect key="frame" x="183" y="16" width="48" height="48"/>
@@ -208,7 +221,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memberReuseIdentifier" id="Acg-Gp-ZO1">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memberReuseIdentifier" id="Acg-Gp-ZO1" customClass="MemberCollectionViewCell" customModule="MiMORNI" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9OI-l5-yYk">
@@ -219,52 +232,37 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
                                                             <state key="normal" image="iconProfileA"/>
                                                             <connections>
+                                                                <action selector="memberButtonClicked:" destination="Acg-Gp-ZO1" eventType="touchUpInside" id="LUZ-r3-wTY"/>
                                                                 <segue destination="xdI-3w-Ts8" kind="show" id="yIf-lw-yBx"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-Nk-C1b">
+                                                            <rect key="frame" x="13" y="12.5" width="16" height="17"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <color key="textColor" name="black"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="T7a-Nk-C1b" firstAttribute="centerX" secondItem="9OI-l5-yYk" secondAttribute="centerX" id="53B-f2-ZQW"/>
                                                         <constraint firstAttribute="bottom" secondItem="cFB-Ad-Er1" secondAttribute="bottom" id="MZe-pK-t2E"/>
+                                                        <constraint firstItem="T7a-Nk-C1b" firstAttribute="centerY" secondItem="9OI-l5-yYk" secondAttribute="centerY" id="abf-UA-Qu7"/>
                                                         <constraint firstAttribute="trailing" secondItem="cFB-Ad-Er1" secondAttribute="trailing" id="bqz-aU-s5e"/>
                                                         <constraint firstItem="cFB-Ad-Er1" firstAttribute="top" secondItem="9OI-l5-yYk" secondAttribute="top" id="kcz-Q7-eEh"/>
                                                         <constraint firstItem="cFB-Ad-Er1" firstAttribute="leading" secondItem="9OI-l5-yYk" secondAttribute="leading" id="yfp-p8-Hr9"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="42" height="42"/>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="additionalReuseIdentifier" id="1GO-Bs-1jU">
-                                                <rect key="frame" x="50" y="0.0" width="42" height="42"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aI0-Bc-uqu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw0-ft-VIp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-Nk-C1b">
-                                                                    <rect key="frame" x="13" y="12.5" width="16" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                                    <color key="textColor" name="black"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" name="veryLightPinkThree"/>
-                                                            <constraints>
-                                                                <constraint firstItem="T7a-Nk-C1b" firstAttribute="centerX" secondItem="lw0-ft-VIp" secondAttribute="centerX" id="ReO-MC-sc2"/>
-                                                                <constraint firstItem="T7a-Nk-C1b" firstAttribute="centerY" secondItem="lw0-ft-VIp" secondAttribute="centerY" id="TZC-83-9ql"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="lw0-ft-VIp" secondAttribute="bottom" id="2jQ-Me-Cd3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="lw0-ft-VIp" secondAttribute="trailing" id="AEM-EL-yWn"/>
-                                                        <constraint firstItem="lw0-ft-VIp" firstAttribute="top" secondItem="aI0-Bc-uqu" secondAttribute="top" id="ufL-G7-fHC"/>
-                                                        <constraint firstItem="lw0-ft-VIp" firstAttribute="leading" secondItem="aI0-Bc-uqu" secondAttribute="leading" id="yH9-hv-t8r"/>
-                                                    </constraints>
-                                                </collectionViewCellContentView>
+                                                <connections>
+                                                    <outlet property="additionalLabel" destination="T7a-Nk-C1b" id="knw-aq-SzX"/>
+                                                    <outlet property="memberButton" destination="cFB-Ad-Er1" id="6O4-AH-wg0"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="zf1-qC-HXc" id="SpE-pZ-JTe"/>
+                                            <outlet property="delegate" destination="zf1-qC-HXc" id="5LQ-g4-ZOI"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -291,15 +289,37 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kLo-BC-fAi">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="pictureReuseIdentifier" id="kLo-BC-fAi" customClass="PictureCollectionViewCell" customModule="MiMORNI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="16" width="262" height="262"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hiM-qm-QLO">
                                             <rect key="frame" x="0.0" y="0.0" width="262" height="262"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-hN-Cps">
+                                                    <rect key="frame" x="0.0" y="0.0" width="262" height="262"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="262" id="W6U-yQ-t58"/>
+                                                        <constraint firstAttribute="height" constant="262" id="w0g-lq-1Ks"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vDg-hN-Cps" secondAttribute="bottom" id="BI1-vg-VEV"/>
+                                                <constraint firstItem="vDg-hN-Cps" firstAttribute="leading" secondItem="hiM-qm-QLO" secondAttribute="leading" id="ElI-Iw-cwa"/>
+                                                <constraint firstItem="vDg-hN-Cps" firstAttribute="top" secondItem="hiM-qm-QLO" secondAttribute="top" id="OXG-Nk-aJn"/>
+                                                <constraint firstAttribute="trailing" secondItem="vDg-hN-Cps" secondAttribute="trailing" id="pyX-bC-lDj"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="pictureImageView" destination="vDg-hN-Cps" id="Dqt-sW-mES"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="zf1-qC-HXc" id="HPJ-YK-4Bn"/>
+                                    <outlet property="delegate" destination="zf1-qC-HXc" id="AMa-Ku-CVM"/>
+                                </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gK7-W8-ogH">
                                 <rect key="frame" x="0.0" y="667" width="414" height="1"/>
@@ -363,16 +383,34 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wWv-gM-Q7a">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myGoalReuseIdentifier" id="wWv-gM-Q7a" customClass="MyGoalCollectionViewCell" customModule="MiMORNI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zbb-0l-jg7">
                                             <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconJournalWhite" translatesAutoresizingMaskIntoConstraints="NO" id="1Fk-AB-5iA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Fk-AB-5iA" firstAttribute="top" secondItem="zbb-0l-jg7" secondAttribute="top" id="IHc-Le-wku"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Fk-AB-5iA" secondAttribute="bottom" id="PSh-1m-NCe"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Fk-AB-5iA" secondAttribute="trailing" id="SN9-LY-mHu"/>
+                                                <constraint firstItem="1Fk-AB-5iA" firstAttribute="leading" secondItem="zbb-0l-jg7" secondAttribute="leading" id="itY-Rb-xcT"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="28" height="28"/>
+                                        <connections>
+                                            <outlet property="myAchievementImageView" destination="1Fk-AB-5iA" id="QP0-lG-QEl"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="zf1-qC-HXc" id="YES-qT-Lxa"/>
+                                    <outlet property="delegate" destination="zf1-qC-HXc" id="Cwy-iP-7XO"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -408,15 +446,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Csi-Cx-1cN"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="e1s-gJ-v4z" id="y2C-oG-JyF"/>
+                        <outlet property="durationLabel" destination="zfD-Ek-VQK" id="0po-fb-hFZ"/>
+                        <outlet property="groupAchievementsLabel" destination="pbB-KR-i01" id="xzB-gK-Rk8"/>
+                        <outlet property="memberCollection" destination="6bY-lC-2lM" id="qG0-55-yQZ"/>
+                        <outlet property="myGoalCollection" destination="AM3-gT-FOT" id="JwG-FT-GXM"/>
+                        <outlet property="numOfGoalsLabel" destination="whR-Db-LLW" id="99M-yF-nf6"/>
+                        <outlet property="pictureCollection" destination="4S6-HG-AIk" id="FDf-R8-udC"/>
+                        <outlet property="routineLabel" destination="Kqg-NM-P8Q" id="G7H-g3-ty8"/>
+                        <outlet property="userAchievementsLabel" destination="SEB-ia-z76" id="Iqv-IJ-q0i"/>
+                        <outlet property="userNameAchiLabel" destination="YV0-QV-Yv0" id="Cpg-C5-uGs"/>
+                        <outlet property="userNameLabel" destination="QYb-bi-AZY" id="trS-pW-aR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jlj-4e-zxh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84.057971014492765" y="176.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Story View Controller-->
         <scene sceneID="dRh-mq-ibw">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="xdI-3w-Ts8" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="xdI-3w-Ts8" customClass="StoryViewController" customModule="MiMORNI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mRx-FP-SF5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,14 +478,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKM-HD-FoH">
                                 <rect key="frame" x="362" y="50" width="36" height="36"/>
                                 <state key="normal" image="buttonOutBlack"/>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="xdI-3w-Ts8" eventType="touchUpInside" id="dZV-6n-gPy"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3I-4t-WpQ">
                                 <rect key="frame" x="24" y="94" width="366" height="52"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFA-KX-NhB">
-                                        <rect key="frame" x="56" y="0.0" width="42" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suzi (you)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFA-KX-NhB">
+                                        <rect key="frame" x="56" y="0.0" width="71" height="17"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <color key="textColor" name="darkGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconProfileA50" translatesAutoresizingMaskIntoConstraints="NO" id="Whn-kM-nX1">
@@ -454,7 +508,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="X8u-RN-VaB">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memberGoalReuseIdentifier" id="X8u-RN-VaB" customClass="memberGoalCollectionViewCell" customModule="MiMORNI" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gu1-Gg-75o">
@@ -473,6 +527,9 @@
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="28" height="28"/>
+                                                <connections>
+                                                    <outlet property="achievementsImageView" destination="73u-6m-vtK" id="54M-KL-HNx"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -507,6 +564,10 @@
                         <viewLayoutGuide key="safeArea" id="i52-TW-5oa"/>
                     </view>
                     <navigationItem key="navigationItem" id="6hF-eQ-gdp"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="Whn-kM-nX1" id="Knc-iS-mpm"/>
+                        <outlet property="userNameLabel" destination="JFA-KX-NhB" id="ag3-JA-VUZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrC-fb-oou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -517,6 +578,7 @@
         <image name="buttonCameraDefault" width="48" height="48"/>
         <image name="buttonOutBlack" width="36" height="36"/>
         <image name="iconBedWhite" width="28" height="28"/>
+        <image name="iconJournalWhite" width="28" height="28"/>
         <image name="iconProfileA" width="42" height="42"/>
         <image name="iconProfileA50" width="50" height="50"/>
         <namedColor name="black">
@@ -536,9 +598,6 @@
         </namedColor>
         <namedColor name="lightishBlue">
             <color red="0.28627450980392155" green="0.32941176470588235" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="veryLightPinkThree">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="veryLightPinkTwo">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -34,6 +34,14 @@
 		03E1450325E250FC008297B2 /* GoalSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1450225E250FC008297B2 /* GoalSettingViewController.swift */; };
 		03E1450525E25176008297B2 /* GoalSettingViewController+GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1450425E25176008297B2 /* GoalSettingViewController+GoalTableView.swift */; };
 		03E1450825E26121008297B2 /* Connectivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E1450725E26121008297B2 /* Connectivity.storyboard */; };
+		03E1450A25E271B7008297B2 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1450925E271B7008297B2 /* GroupViewController.swift */; };
+		03E1450E25E271E9008297B2 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1450D25E271E9008297B2 /* StoryViewController.swift */; };
+		03E1451325E27295008297B2 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451225E27295008297B2 /* PictureCollectionViewCell.swift */; };
+		03E1451525E27308008297B2 /* MemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451425E27308008297B2 /* MemberCollectionViewCell.swift */; };
+		03E1451725E27371008297B2 /* MyGoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451625E27371008297B2 /* MyGoalCollectionViewCell.swift */; };
+		03E1451B25E273DF008297B2 /* memberGoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451A25E273DF008297B2 /* memberGoalCollectionViewCell.swift */; };
+		03E1451D25E274C2008297B2 /* GroupViewController+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451C25E274C2008297B2 /* GroupViewController+CollectionViews.swift */; };
+		03E1451F25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451E25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +74,14 @@
 		03E1450225E250FC008297B2 /* GoalSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSettingViewController.swift; sourceTree = "<group>"; };
 		03E1450425E25176008297B2 /* GoalSettingViewController+GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalSettingViewController+GoalTableView.swift"; sourceTree = "<group>"; };
 		03E1450725E26121008297B2 /* Connectivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Connectivity.storyboard; sourceTree = "<group>"; };
+		03E1450925E271B7008297B2 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		03E1450D25E271E9008297B2 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		03E1451225E27295008297B2 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		03E1451425E27308008297B2 /* MemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		03E1451625E27371008297B2 /* MyGoalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalCollectionViewCell.swift; sourceTree = "<group>"; };
+		03E1451A25E273DF008297B2 /* memberGoalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberGoalCollectionViewCell.swift; sourceTree = "<group>"; };
+		03E1451C25E274C2008297B2 /* GroupViewController+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupViewController+CollectionViews.swift"; sourceTree = "<group>"; };
+		03E1451E25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryViewController+MemberGoalCollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,9 +221,33 @@
 		03E1450625E26106008297B2 /* Group Connectivity */ = {
 			isa = PBXGroup;
 			children = (
+				03E1451925E273C6008297B2 /* StoryCollections */,
+				03E1451825E273B0008297B2 /* GroupCollections */,
 				03E1450725E26121008297B2 /* Connectivity.storyboard */,
+				03E1450925E271B7008297B2 /* GroupViewController.swift */,
+				03E1450D25E271E9008297B2 /* StoryViewController.swift */,
 			);
 			path = "Group Connectivity";
+			sourceTree = "<group>";
+		};
+		03E1451825E273B0008297B2 /* GroupCollections */ = {
+			isa = PBXGroup;
+			children = (
+				03E1451625E27371008297B2 /* MyGoalCollectionViewCell.swift */,
+				03E1451425E27308008297B2 /* MemberCollectionViewCell.swift */,
+				03E1451225E27295008297B2 /* PictureCollectionViewCell.swift */,
+				03E1451C25E274C2008297B2 /* GroupViewController+CollectionViews.swift */,
+			);
+			path = GroupCollections;
+			sourceTree = "<group>";
+		};
+		03E1451925E273C6008297B2 /* StoryCollections */ = {
+			isa = PBXGroup;
+			children = (
+				03E1451A25E273DF008297B2 /* memberGoalCollectionViewCell.swift */,
+				03E1451E25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift */,
+			);
+			path = StoryCollections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,19 +330,27 @@
 				034AD45025E1DD9A00111C28 /* ViewController+GoalTableView.swift in Sources */,
 				034AD44E25E1DD1F00111C28 /* GoalTableViewCell.swift in Sources */,
 				03CCE15D25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift in Sources */,
+				03E1450E25E271E9008297B2 /* StoryViewController.swift in Sources */,
+				03E1451F25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift in Sources */,
 				0328F59725E1AD480044D335 /* ViewController.swift in Sources */,
 				03E1450525E25176008297B2 /* GoalSettingViewController+GoalTableView.swift in Sources */,
+				03E1451D25E274C2008297B2 /* GroupViewController+CollectionViews.swift in Sources */,
 				03CCE16425E232C300C6A8B7 /* BedTimeTableViewCell.swift in Sources */,
 				03E1450325E250FC008297B2 /* GoalSettingViewController.swift in Sources */,
+				03E1451725E27371008297B2 /* MyGoalCollectionViewCell.swift in Sources */,
 				034AD45925E21D6600111C28 /* DurationViewController.swift in Sources */,
 				034AD45B25E21D9100111C28 /* TimeViewController.swift in Sources */,
 				034AD45725E21D4700111C28 /* UserNameViewController.swift in Sources */,
 				0328F59325E1AD480044D335 /* AppDelegate.swift in Sources */,
+				03E1450A25E271B7008297B2 /* GroupViewController.swift in Sources */,
+				03E1451525E27308008297B2 /* MemberCollectionViewCell.swift in Sources */,
 				03E144FF25E250D1008297B2 /* BigTableViewCell.swift in Sources */,
 				03E1450125E250E0008297B2 /* SmallTableViewCell.swift in Sources */,
 				034AD44425E1D30000111C28 /* UIView+Extension.swift in Sources */,
 				03CCE15925E2324500C6A8B7 /* DurationTableViewCell.swift in Sources */,
+				03E1451B25E273DF008297B2 /* memberGoalCollectionViewCell.swift in Sources */,
 				034AD44B25E1D6B900111C28 /* ViewController+GoalCollectionView.swift in Sources */,
+				03E1451325E27295008297B2 /* PictureCollectionViewCell.swift in Sources */,
 				03CCE15625E2301000C6A8B7 /* UITextField+ActivateButton.swift in Sources */,
 				0328F59525E1AD480044D335 /* SceneDelegate.swift in Sources */,
 			);

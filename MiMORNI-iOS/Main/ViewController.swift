@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 //    var smallGoals = ["Make a bed", "Drink 1L of water", "Write a blog", "Read newspaper", "Meditation", "Journaling", ]
 //    var bigGoals = ["Exercise", "Read a book", "Study (learn some new things)"]
     
-    var goalItems = [String()]
+    var achievedGoalItems = [String()]
     
     let goalToIcon = ["Make a bed": "iconBed",  "Drink 1L of water": "iconWater", "Write a blog": "iconBlog", "Read newspaper": "iconNews", "Meditation": "iconMeditation", "Journaling": "iconJournal", "Exercise": "iconExercise", "Read a book": "iconBook", "Study (learn some new things)":"iconStudy"]
     
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         userNameLabel.text = "MiMORNi"
         
         todayDateLabel.text = "Today, " + formatPrettyDate()
-        self.goalItems = []
+        self.achievedGoalItems = []
         
         if let name = userName, let duration = duration, let waketime = waketime, let bedtime = bedtime, let sGoal = smallGoals, let bGoal = bigGoals {
             userNameLabel.text = name
@@ -104,6 +104,23 @@ class ViewController: UIViewController {
         }
         self.tableView.reloadData()
         self.collectionView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is GroupViewController {
+            if let vc = segue.destination as? GroupViewController,
+                let name = userName, let duration = duration, let waketime = waketime, let bedtime = bedtime,
+                let sGoals = smallGoals, let bGoals = bigGoals
+            {
+                vc.userName = name
+                vc.duration = duration
+                vc.waketime = waketime
+                vc.bedtime = bedtime
+                vc.numOfGoals = sGoals.count + bGoals.count
+                vc.myAchievements = achievedGoalItems
+            }
+            
+        }
     }
 }
 

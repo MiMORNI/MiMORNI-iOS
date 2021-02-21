@@ -41,7 +41,7 @@ extension ViewController: UITableViewDataSource {
         
         if let goalText = cell.goalLabel.text,
             let goalIcon = self.goalToIcon[goalText] {
-            let index = self.goalItems.firstIndex(of: goalIcon)
+            let index = self.achievedGoalItems.firstIndex(of: goalIcon)
             if index != nil {
                 cell.checkButton.isSelected = true
             }
@@ -62,15 +62,15 @@ extension ViewController: GoalTableViewCellDelegate {
 
         if goalTableViewCell.checkButton.isSelected {
             goalTableViewCell.checkButton.isSelected = false
-            if let index = self.goalItems.firstIndex(of: goal){
-                self.goalItems.remove(at: index)
+            if let index = self.achievedGoalItems.firstIndex(of: goal){
+                self.achievedGoalItems.remove(at: index)
             }
         }
         else {
             goalTableViewCell.checkButton.isSelected = true
-            self.goalItems.insert(goal, at: 0)
+            self.achievedGoalItems.insert(goal, at: 0)
         }
-        print(self.goalItems)
+        print(self.achievedGoalItems)
         self.collectionView.reloadData()
     }
 }

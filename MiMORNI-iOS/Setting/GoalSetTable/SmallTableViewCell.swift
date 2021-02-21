@@ -26,6 +26,12 @@ class SmallTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0))
+    }
 
     @IBAction func smallButtonClicked(_ sender: UIButton) {
         if let goal = smallLabel.text,
