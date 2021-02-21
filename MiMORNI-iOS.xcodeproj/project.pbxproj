@@ -68,6 +68,7 @@
 		0328F59125E1AD480044D335 /* MiMORNI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				034AD45325E207AF00111C28 /* Setting */,
 				034AD44025E1CDB500111C28 /* Extensions */,
 				0328F5A725E1ADDC0044D335 /* Supporting Files */,
 				0328F5A625E1ADCB0044D335 /* Main */,
@@ -123,6 +124,13 @@
 				034AD44F25E1DD9A00111C28 /* ViewController+GoalTableView.swift */,
 			);
 			path = GoalTable;
+			sourceTree = "<group>";
+		};
+		034AD45325E207AF00111C28 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

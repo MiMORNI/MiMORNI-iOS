@@ -107,7 +107,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" name="maize"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="4RA-ca-O70" firstAttribute="leading" secondItem="9oD-Df-63j" secondAttribute="leading" id="F2x-tC-cTd"/>
                                     <constraint firstItem="eK0-bt-gM0" firstAttribute="leading" secondItem="9oD-Df-63j" secondAttribute="leading" id="LqK-ex-JbP"/>
@@ -143,7 +143,7 @@
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xY9-oz-biV">
                                         <rect key="frame" x="1" y="37" width="364" height="48"/>
-                                        <color key="backgroundColor" name="maize"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="ml3-5r-b4o"/>
                                         </constraints>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" name="maize"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="muA-ch-9r0" secondAttribute="height" multiplier="343:81" id="0SY-df-uao"/>
                                     <constraint firstItem="H5K-48-M2j" firstAttribute="leading" secondItem="muA-ch-9r0" secondAttribute="leading" id="0eZ-oR-Syi"/>
@@ -241,12 +241,15 @@
                                     <segment title="Small Goal"/>
                                     <segment title="Big Goal"/>
                                 </segments>
+                                <connections>
+                                    <action selector="goalSegmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RUW-Sx-jui"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wo2-EV-vZg">
                                 <rect key="frame" x="16" y="478" width="382" height="322"/>
-                                <color key="backgroundColor" name="maize"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalTableCell" rowHeight="52" id="jI1-FJ-NBW" customClass="GoalTableViewCell" customModule="MiMORNI" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="goalTableCell" rowHeight="52" id="jI1-FJ-NBW" customClass="GoalTableViewCell" customModule="MiMORNI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jI1-FJ-NBW" id="rSb-Xa-0Os">
@@ -259,6 +262,10 @@
                                                         <constraint firstAttribute="width" secondItem="Y9E-Bc-CS5" secondAttribute="height" multiplier="1:1" id="n03-j2-qdP"/>
                                                     </constraints>
                                                     <state key="normal" image="buttonCheckboxBlank"/>
+                                                    <state key="selected" image="buttonCheckboxActive"/>
+                                                    <connections>
+                                                        <action selector="checkboxButtonClicked:" destination="jI1-FJ-NBW" eventType="touchUpInside" id="g6a-Fh-gZQ"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWP-cT-Z0n">
                                                     <rect key="frame" x="52" y="16" width="78" height="20"/>
@@ -276,8 +283,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="Y9E-Bc-CS5" secondAttribute="bottom" id="v6H-nq-hWX"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="maize"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="checkButton" destination="Y9E-Bc-CS5" id="5fW-Jg-lTd"/>
                                             <outlet property="goalLabel" destination="aWP-cT-Z0n" id="kV0-Ic-rSp"/>
                                         </connections>
                                     </tableViewCell>
@@ -309,11 +317,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="xY9-oz-biV" id="BYQ-ys-MeV"/>
                         <outlet property="daytimeLabel" destination="A5h-Ca-r6f" id="MZn-UI-F0t"/>
                         <outlet property="durationLabel" destination="aLC-ay-B7L" id="6Sg-hp-fVN"/>
+                        <outlet property="forLabel" destination="O6o-XB-LsK" id="efg-TU-wDc"/>
+                        <outlet property="goalLabel" destination="H5K-48-M2j" id="KAa-hd-YyJ"/>
                         <outlet property="numOfGoalsLabel" destination="HtS-bi-bhG" id="mfS-Rr-xhb"/>
+                        <outlet property="segmentedControl" destination="ijo-I6-Zfp" id="r6o-U2-ckY"/>
+                        <outlet property="tableView" destination="wo2-EV-vZg" id="tqc-Mc-r66"/>
                         <outlet property="todayDateLabel" destination="3DE-pM-ABc" id="M4f-Dg-cgh"/>
+                        <outlet property="userNameAddtionalLabel" destination="BZR-n1-yvl" id="0jj-fH-4xa"/>
                         <outlet property="userNameLabel" destination="4RA-ca-O70" id="jUR-gc-0QB"/>
+                        <outlet property="withLabel" destination="eK0-bt-gM0" id="vra-ZW-d2s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -323,6 +338,7 @@
     </scenes>
     <resources>
         <image name="buttonAdd" width="48" height="48"/>
+        <image name="buttonCheckboxActive" width="48" height="48"/>
         <image name="buttonCheckboxBlank" width="48" height="48"/>
         <image name="iconNonWhite" width="48" height="48"/>
         <namedColor name="black">

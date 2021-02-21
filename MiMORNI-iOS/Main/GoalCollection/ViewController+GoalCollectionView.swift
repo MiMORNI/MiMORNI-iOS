@@ -23,11 +23,11 @@ extension ViewController: UICollectionViewDataSource {
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return self.items.count
-        if self.items.count == 0 {
+        if self.goalItems.count == 0 {
             return 1
         }
         else {
-            return self.items.count
+            return self.goalItems.count
         }
     }
     
@@ -38,11 +38,19 @@ extension ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: goalCollectionReuseIdentifier, for: indexPath as IndexPath) as! GoalCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        if self.items.count == 0 {
+        if self.goalItems.count == 0 {
             cell.goalImage.image = UIImage(named: "iconNonWhite")
         }
         else {
-            cell.goalImage.image = UIImage(named: "iconMeditationBlack")
+            let item = self.goalItems[indexPath.row]
+            var imgName = item
+            if self.segmentedControl.selectedSegmentIndex == 0 {
+                imgName += "Black"
+            }
+            else {
+                imgName += "Yellow"
+            }
+            cell.goalImage.image = UIImage(named:imgName)
         }
         
         return cell
