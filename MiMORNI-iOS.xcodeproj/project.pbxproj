@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,9 @@
 		034AD45725E21D4700111C28 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD45625E21D4700111C28 /* UserNameViewController.swift */; };
 		034AD45925E21D6600111C28 /* DurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD45825E21D6600111C28 /* DurationViewController.swift */; };
 		034AD45B25E21D9100111C28 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034AD45A25E21D9100111C28 /* TimeViewController.swift */; };
+		0375A5C025E28A3A0076875E /* MiMORNiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0375A5BF25E28A3A0076875E /* MiMORNiService.swift */; };
+		0375A5C225E28AD70076875E /* MiMORNiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0375A5C125E28AD70076875E /* MiMORNiProvider.swift */; };
+		0375A5C425E29D740076875E /* GroupInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0375A5C325E29D740076875E /* GroupInfoResponse.swift */; };
 		03CCE15625E2301000C6A8B7 /* UITextField+ActivateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE15525E2301000C6A8B7 /* UITextField+ActivateButton.swift */; };
 		03CCE15925E2324500C6A8B7 /* DurationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE15825E2324500C6A8B7 /* DurationTableViewCell.swift */; };
 		03CCE15D25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCE15C25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift */; };
@@ -42,6 +45,7 @@
 		03E1451B25E273DF008297B2 /* memberGoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451A25E273DF008297B2 /* memberGoalCollectionViewCell.swift */; };
 		03E1451D25E274C2008297B2 /* GroupViewController+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451C25E274C2008297B2 /* GroupViewController+CollectionViews.swift */; };
 		03E1451F25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E1451E25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift */; };
+		E33C45083A1ED1E8AB943482 /* Pods_MiMORNI_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E216028E0B93C88BAB85A79 /* Pods_MiMORNI_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,9 @@
 		034AD45625E21D4700111C28 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		034AD45825E21D6600111C28 /* DurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationViewController.swift; sourceTree = "<group>"; };
 		034AD45A25E21D9100111C28 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		0375A5BF25E28A3A0076875E /* MiMORNiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiMORNiService.swift; sourceTree = "<group>"; };
+		0375A5C125E28AD70076875E /* MiMORNiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiMORNiProvider.swift; sourceTree = "<group>"; };
+		0375A5C325E29D740076875E /* GroupInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInfoResponse.swift; sourceTree = "<group>"; };
 		03CCE15525E2301000C6A8B7 /* UITextField+ActivateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ActivateButton.swift"; sourceTree = "<group>"; };
 		03CCE15825E2324500C6A8B7 /* DurationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationTableViewCell.swift; sourceTree = "<group>"; };
 		03CCE15C25E2328D00C6A8B7 /* DurationViewController+DurationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DurationViewController+DurationTableView.swift"; sourceTree = "<group>"; };
@@ -82,6 +89,9 @@
 		03E1451A25E273DF008297B2 /* memberGoalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberGoalCollectionViewCell.swift; sourceTree = "<group>"; };
 		03E1451C25E274C2008297B2 /* GroupViewController+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupViewController+CollectionViews.swift"; sourceTree = "<group>"; };
 		03E1451E25E281D1008297B2 /* StoryViewController+MemberGoalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryViewController+MemberGoalCollectionView.swift"; sourceTree = "<group>"; };
+		5E216028E0B93C88BAB85A79 /* Pods_MiMORNI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiMORNI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6015750BFA3799094CF9D466 /* Pods-MiMORNI-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiMORNI-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MiMORNI-iOS/Pods-MiMORNI-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B161CD23051754AA5BB45728 /* Pods-MiMORNI-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiMORNI-iOS.release.xcconfig"; path = "Target Support Files/Pods-MiMORNI-iOS/Pods-MiMORNI-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E33C45083A1ED1E8AB943482 /* Pods_MiMORNI_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +111,8 @@
 			children = (
 				0328F59125E1AD480044D335 /* MiMORNI-iOS */,
 				0328F59025E1AD480044D335 /* Products */,
+				29E3F5C06C7F3EF78823953A /* Pods */,
+				FFCBB2AD4BA8266768526957 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +127,8 @@
 		0328F59125E1AD480044D335 /* MiMORNI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0375A5BE25E28A230076875E /* Network */,
+				0375A5BD25E289F90076875E /* Model */,
 				03E1450625E26106008297B2 /* Group Connectivity */,
 				034AD45325E207AF00111C28 /* Setting */,
 				034AD44025E1CDB500111C28 /* Extensions */,
@@ -189,6 +204,23 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		0375A5BD25E289F90076875E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0375A5C325E29D740076875E /* GroupInfoResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0375A5BE25E28A230076875E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0375A5BF25E28A3A0076875E /* MiMORNiService.swift */,
+				0375A5C125E28AD70076875E /* MiMORNiProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		03CCE15725E2321A00C6A8B7 /* DurationTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +282,23 @@
 			path = StoryCollections;
 			sourceTree = "<group>";
 		};
+		29E3F5C06C7F3EF78823953A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6015750BFA3799094CF9D466 /* Pods-MiMORNI-iOS.debug.xcconfig */,
+				B161CD23051754AA5BB45728 /* Pods-MiMORNI-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FFCBB2AD4BA8266768526957 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E216028E0B93C88BAB85A79 /* Pods_MiMORNI_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0328F5A325E1AD4A0044D335 /* Build configuration list for PBXNativeTarget "MiMORNI-iOS" */;
 			buildPhases = (
+				572B013F3646D103DE7AB072 /* [CP] Check Pods Manifest.lock */,
 				0328F58B25E1AD480044D335 /* Sources */,
 				0328F58C25E1AD480044D335 /* Frameworks */,
 				0328F58D25E1AD480044D335 /* Resources */,
+				CFA259E31EA26CB56290013F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +370,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		572B013F3646D103DE7AB072 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiMORNI-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA259E31EA26CB56290013F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiMORNI-iOS/Pods-MiMORNI-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiMORNI-iOS/Pods-MiMORNI-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiMORNI-iOS/Pods-MiMORNI-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0328F58B25E1AD480044D335 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -335,6 +428,7 @@
 				0328F59725E1AD480044D335 /* ViewController.swift in Sources */,
 				03E1450525E25176008297B2 /* GoalSettingViewController+GoalTableView.swift in Sources */,
 				03E1451D25E274C2008297B2 /* GroupViewController+CollectionViews.swift in Sources */,
+				0375A5C225E28AD70076875E /* MiMORNiProvider.swift in Sources */,
 				03CCE16425E232C300C6A8B7 /* BedTimeTableViewCell.swift in Sources */,
 				03E1450325E250FC008297B2 /* GoalSettingViewController.swift in Sources */,
 				03E1451725E27371008297B2 /* MyGoalCollectionViewCell.swift in Sources */,
@@ -349,10 +443,12 @@
 				034AD44425E1D30000111C28 /* UIView+Extension.swift in Sources */,
 				03CCE15925E2324500C6A8B7 /* DurationTableViewCell.swift in Sources */,
 				03E1451B25E273DF008297B2 /* memberGoalCollectionViewCell.swift in Sources */,
+				0375A5C425E29D740076875E /* GroupInfoResponse.swift in Sources */,
 				034AD44B25E1D6B900111C28 /* ViewController+GoalCollectionView.swift in Sources */,
 				03E1451325E27295008297B2 /* PictureCollectionViewCell.swift in Sources */,
 				03CCE15625E2301000C6A8B7 /* UITextField+ActivateButton.swift in Sources */,
 				0328F59525E1AD480044D335 /* SceneDelegate.swift in Sources */,
+				0375A5C025E28A3A0076875E /* MiMORNiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +590,7 @@
 		};
 		0328F5A425E1AD4A0044D335 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6015750BFA3799094CF9D466 /* Pods-MiMORNI-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +609,7 @@
 		};
 		0328F5A525E1AD4A0044D335 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B161CD23051754AA5BB45728 /* Pods-MiMORNI-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

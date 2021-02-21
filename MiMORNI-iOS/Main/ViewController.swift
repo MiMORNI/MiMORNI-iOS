@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     var bigGoals:[String]?
 //    var smallGoals = ["Make a bed", "Drink 1L of water", "Write a blog", "Read newspaper", "Meditation", "Journaling", ]
 //    var bigGoals = ["Exercise", "Read a book", "Study (learn some new things)"]
+    var groupInfoResponse: GroupInfoResponse?
     
     var achievedGoalItems = [String()]
     
@@ -105,21 +106,34 @@ class ViewController: UIViewController {
         self.tableView.reloadData()
         self.collectionView.reloadData()
     }
+    @IBAction func groupButtonClicked(_ sender: Any) {
+        requestGroupInfo()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is GroupViewController {
-            if let vc = segue.destination as? GroupViewController,
-                let name = userName, let duration = duration, let waketime = waketime, let bedtime = bedtime,
-                let sGoals = smallGoals, let bGoals = bigGoals
-            {
-                vc.userName = name
-                vc.duration = duration
-                vc.waketime = waketime
-                vc.bedtime = bedtime
-                vc.numOfGoals = sGoals.count + bGoals.count
-                vc.myAchievements = achievedGoalItems
+//        if segue.destination is GroupViewController {
+//            if let vc = segue.destination as? GroupViewController,
+//                let name = userName, let duration = duration, let waketime = waketime, let bedtime = bedtime,
+//                let sGoals = smallGoals, let bGoals = bigGoals
+//            {
+//                vc.userName = name
+//                vc.duration = duration
+//                vc.waketime = waketime
+//                vc.bedtime = bedtime
+//                vc.numOfGoals = sGoals.count + bGoals.count
+//                vc.myAchievements = achievedGoalItems
+//                requestGroupInfo()
+//
+//            }
+//        }
+    }
+    @IBAction func plusButtonClicked(_ sender: UIButton) {
+        if let name = userName {
+            var goals = [String:Bool]()
+            for eachGoal in achievedGoalItems {
+                goals[eachGoal] = true
             }
-            
+            requestUpdateGoals(userName: name, goals: goals)
         }
     }
 }
@@ -148,5 +162,64 @@ extension ViewController {
         formatter.locale = Locale(identifier: "en_US")
 
         return formatter.string(from: now)
+    }
+}
+
+extension ViewController {
+    func requestUpdateGoals(userName: String, goals: [String:Bool]) {
+        MiMORNiProvider().updateGoals(username: userName, goals: goals, completion: { [weak self] data in
+            let decoder = JSONDecoder()
+            if let data = data {
+                do {
+                    print(data)
+                    print("UPDATE Success")
+                    
+                } catch {
+                    print("error: ", error)
+                }
+            }
+            
+        }) { error in
+            print("error: ", error)
+        }
+    }
+    
+    func requestGroupInfo() {
+        MiMORNiProvider().getGroupInfo(completion: { [weak self] data in
+            let decoder = JSONDecoder()
+            if let data = data {
+                do {
+                    let groupInfo = try decoder.decode(GroupInfoResponse.self, from: data)
+                    self?.groupInfoResponse = groupInfo
+                    print(groupInfo)
+                    
+                    
+                } catch {
+                    print("error: ", error)
+                }
+            }
+            
+            DispatchQueue.main.async {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Connectivity", bundle: nil)
+                let newViewController = storyBoard.instantiateInitialViewController() as! GroupViewController
+                newViewController.groupInfo = self?.groupInfoResponse
+                newViewController.modalPresentationStyle = .fullScreen
+                
+                if let name = self?.userName, let duration = self?.duration, let waketime = self?.waketime, let bedtime = self?.bedtime,
+                    let sGoals = self?.smallGoals, let bGoals = self?.bigGoals
+                {
+                    newViewController.userName = name
+                    newViewController.duration = duration
+                    newViewController.waketime = waketime
+                    newViewController.bedtime = bedtime
+                    newViewController.numOfGoals = sGoals.count + bGoals.count
+                    newViewController.myAchievements = self?.achievedGoalItems
+                }
+                self?.present(newViewController, animated: true, completion: nil)
+            }
+            
+        }) { error in
+            print("error: ", error)
+        }
     }
 }

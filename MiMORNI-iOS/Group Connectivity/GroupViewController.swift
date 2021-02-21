@@ -30,6 +30,11 @@ class GroupViewController: UIViewController {
     
     var members = ["1", "2", "3", "4"]
     var imgs = ["miracle1", "miracle2", "miracle3", "miracle4", "miracle5"]
+    var membersAchievedList:[[String:[String:Bool]]]?
+    var membersPictures:[String]?
+    
+    var groupInfo:GroupInfoResponse?
+    
     var myAchievements:[String]?
     var userName:String?
     var duration:String?
@@ -47,7 +52,7 @@ class GroupViewController: UIViewController {
         // Do any additional setup after loading the view.
         dateLabel.text = formatPrettyDate()
         if let num = numOfGoals, let userName = userName, let duration = duration,
-            let waketime = waketime, let bedtime = bedtime {
+            let waketime = waketime, let bedtime = bedtime, let achievements = myAchievements {
             userNameLabel.text = userName
             routineLabel.text = waketime + " TO " + bedtime
             durationLabel.text = duration
@@ -56,16 +61,59 @@ class GroupViewController: UIViewController {
             } else {
                 numOfGoalsLabel.text = "\(num) Goals"
             }
+            userNameAchiLabel.text = userName + " (you)"
+            let myAchievementPercent = (Double(achievements.count)/Double(num)) * 100
+            userAchievementsLabel.text = String(format: "%.2f", myAchievementPercent) + "%"
+        }
+        if let infos = groupInfo {
+            groupAchievementsLabel.text = String(format: "%.2f", infos.percentCompleteCommunity) + "%"
+            processDatas(groupInfo: infos.users)
+            print(self.members.count)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is StoryViewController {
             if let vc = segue.destination as? StoryViewController,
-                let profileImgName = profileImgName, let memberUserName = memberUserName
+                let profileImgName = profileImgName, let memberUserName = memberUserName, let index = memberIndex
             {
                 vc.memberName = memberUserName
                 vc.profileImageName = profileImgName
+                
+                var achieved:[String] = []
+                if let membersAchieved = membersAchievedList {
+                    let goals = membersAchieved[index]
+                    for (eachGoal, result) in goals {
+                        for (each, value) in result {
+                            if value {
+                                achieved.append(each)
+                            }
+                        }
+                    }
+                }
+                
+                vc.achieved = achieved
+                
+                var img:String = ""
+                if let mempics = membersPictures {
+                    img = mempics[index]
+                    print(img)
+                }
+                vc.pics = img
+            }
+        }
+    }
+    
+    func processDatas(groupInfo:[User]) {
+        self.members = []
+        self.membersAchievedList = []
+        self.membersPictures = []
+        
+        for eachGroup in groupInfo {
+            if eachGroup.images.count != 0 {
+                self.members.append(eachGroup.username)
+                self.membersAchievedList?.append(eachGroup.goals)
+                self.membersPictures?.append(eachGroup.images[0])
             }
         }
     }

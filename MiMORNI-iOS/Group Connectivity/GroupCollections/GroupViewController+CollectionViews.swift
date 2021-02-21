@@ -55,6 +55,7 @@ extension GroupViewController: UICollectionViewDataSource {
                 cell.memberButtonAction = { [unowned self] in
                     self.profileImgName = profileImgName
                     self.memberUserName = self.members[indexPath.row]
+                    self.memberIndex = indexPath.row
                 }
             }
             

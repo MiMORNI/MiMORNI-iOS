@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class StoryViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var imageView: UIImageView!
     
     var achieved:[String]?
     var memberName:String?
     var profileImageName:String?
     let achievementReuseIdentifier = "memberGoalReuseIdentifier"
+    var pics:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +29,16 @@ class StoryViewController: UIViewController {
             userNameLabel.text = name
             profileImageView.image = UIImage(named:profile)
         }
+        print(achieved)
+        print(pics)
+//        self.collectionView.reloadData()
+        self.view.reloadInputViews()
+        if let pic = pics {
+            let url = URL(string: pic)
+            imageView.kf.setImage(with: url)
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func backButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

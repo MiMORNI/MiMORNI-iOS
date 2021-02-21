@@ -565,6 +565,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="6hF-eQ-gdp"/>
                     <connections>
+                        <outlet property="collectionView" destination="g06-cN-TGv" id="TaA-D9-JJA"/>
+                        <outlet property="imageView" destination="wwb-4A-9QD" id="4ae-MA-BIA"/>
                         <outlet property="profileImageView" destination="Whn-kM-nX1" id="Knc-iS-mpm"/>
                         <outlet property="userNameLabel" destination="JFA-KX-NhB" id="ag3-JA-VUZ"/>
                     </connections>

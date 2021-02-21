@@ -17,7 +17,7 @@ class TimeViewController: UIViewController {
     var duration:String?
     
     let wakeTimes = ["4 AM", "5 AM", "6 AM", "7 AM"]
-    let bedTimes = ["10 PM", "11 PM", "12 PM"]
+    let bedTimes = ["10 PM", "11 PM", "12 AM"]
     let wakeTableReuseIdentifier = "wakeTableCell"
     let bedTableReuseIdentifier = "bedTableCell"
     

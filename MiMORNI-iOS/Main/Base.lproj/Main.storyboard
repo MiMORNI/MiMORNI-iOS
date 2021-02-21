@@ -210,6 +210,9 @@
                                             <constraint firstAttribute="width" secondItem="tax-JZ-S2r" secondAttribute="height" multiplier="1:1" id="LNq-Rq-isA"/>
                                         </constraints>
                                         <state key="normal" image="buttonAdd"/>
+                                        <connections>
+                                            <action selector="plusButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMK-Jo-bHD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81a-GJ-WqG">
                                         <rect key="frame" x="40" y="24" width="103" height="32"/>
@@ -225,7 +228,7 @@
                                             <color key="titleColor" name="blackTwo"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vrO-mt-SNS" kind="showDetail" id="Y0e-s8-in3"/>
+                                            <action selector="groupButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQc-Ww-MWb"/>
                                         </connections>
                                     </button>
                                 </subviews>

@@ -51,9 +51,48 @@ class GoalSettingViewController: UIViewController {
                 vc.bedtime = bedtime
                 vc.smallGoals = smallGoalsAdded
                 vc.bigGoals = bigGoalsAdded
+                
+                var durationInt = 1
+                if duration == "2 months" {
+                    durationInt = 2
+                }
+                else if duration == "3 months" {
+                    durationInt = 3
+                }
+                
+                var goals = [String:[String:Bool]]()
+                goals["smallGoals"] = [String:Bool]()
+                goals["bigGoals"] = [String:Bool]()
+                for eachSmall in smallGoalsAdded {
+                    goals["smallGoals"]![eachSmall] = false
+                }
+                
+                for eachBig in bigGoalsAdded {
+                    goals["bigGoals"]![eachBig] = false
+                }
+//                print(goals)
+                requestAddUser(userName: name, wakeTime: waketime, bedTime: bedtime, duration: durationInt, goals: goals)
             }
             
         }
     }
+}
 
+extension GoalSettingViewController {
+    func requestAddUser(userName: String, wakeTime: String, bedTime:String, duration:Int, goals:[String : [String : Bool]]) {
+        MiMORNiProvider().addUserName(username: userName, wakeTime: wakeTime, sleepTime: bedTime, durationInMonths: duration, goals: goals, completion: { [weak self] data in
+            let decoder = JSONDecoder()
+            if let data = data {
+                do {
+                    print(data)
+                    
+                } catch {
+                    print("error: ", error)
+                }
+            }
+            
+        }) { error in
+            print("error: ", error)
+        }
+    }
 }

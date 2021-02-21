@@ -15,6 +15,7 @@ extension StoryViewController:UICollectionViewDelegate {
 extension StoryViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let achievements = achieved {
+            print(achievements.count)
             return achievements.count
         }
         else {
@@ -26,7 +27,7 @@ extension StoryViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: achievementReuseIdentifier, for: indexPath as IndexPath) as! memberGoalCollectionViewCell
         if let achievements = achieved {
-            let imageName = achievements[indexPath.row]
+            let imageName = achievements[indexPath.row] + "White"
             cell.achievementsImageView.image = UIImage(named: imageName)
         }
         return cell
